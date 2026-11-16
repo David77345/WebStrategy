@@ -1,0 +1,41 @@
+{
+  "name": "day-strategy",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.11.0",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @day-strategy/web",
+    "build": "npm run build --workspace @day-strategy/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "db:generate": "npm run db:generate --workspace @day-strategy/web",
+    "build:worker": "npm run build:worker --workspace @day-strategy/web",
+    "test:browser": "node tests/browser.cjs",
+    "test:form": "node tests/form-browser.cjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:check": "node scripts/smoke-database.mjs",
+    "env:sync": "node scripts/sync-neon-env.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.16",
+    "playwright": "^1.65.1",
+    "prettier": "^3.10.1",
+    "tsx": "^4.23.15"
+  },
+  "overrides": {
+    "glob": "14.0.6",
+    "minimatch": "11.0.8",
+    "esbuild": "0.28.2"
+  },
+  "dependencies": {
+    "@neon/config": "^1.14.0",
+    "@neon/env": "^2.1.3"
+  }
+}

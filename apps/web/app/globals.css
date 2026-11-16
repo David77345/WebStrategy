@@ -1,0 +1,156 @@
+:root {
+  --cream: #fdedd9;
+  --wine: #4f0808;
+  --cloud: #f0eee9;
+  --muted: #77524b;
+  --line: #4f080833;
+  color-scheme: light;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--wine);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  min-height: 55vh;
+}
+a {
+  color: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+p {
+  margin: 0 0 20px;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+p,
+a {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+input,
+textarea,
+select {
+  min-width: 0;
+}
+::selection {
+  background: var(--wine);
+  color: var(--cream);
+}
+:focus-visible {
+  outline: 3px solid #927046;
+  outline-offset: 5px;
+}
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 100;
+  background: var(--wine);
+  color: var(--cream);
+  padding: 14px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1;
+}
+.brand-logo__symbol {
+  width: 60px;
+  height: 60px;
+}
+.brand-logo__wordmark {
+  font-size: 1.65rem;
+  letter-spacing: 0.16em;
+  display: block;
+}
+.brand-logo__wordmark > span {
+  display: block;
+  font-size: 0.53rem;
+  letter-spacing: 0.32em;
+  margin-top: 7px;
+}
+.brand-logo--hero {
+  flex-direction: column;
+  gap: 0;
+  margin: 20px 0 30px;
+}
+.brand-logo--hero .brand-logo__symbol {
+  width: min(280px, 100%);
+  height: auto;
+}
+.brand-logo--hero .brand-logo__wordmark {
+  font-size: 3.8rem;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+.brand-logo--hero .brand-logo__wordmark > span {
+  font-size: 0.72rem;
+  letter-spacing: 0.65em;
+  margin-top: 15px;
+}
+.brand-logo--footer .brand-logo__symbol {
+  width: 70px;
+  height: 70px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (max-width: 380px) {
+  body {
+    font-size: 15px;
+  }
+  .brand-logo__symbol {
+    width: 50px;
+    height: 50px;
+  }
+  .brand-logo__wordmark {
+    font-size: 1.45rem;
+  }
+}

@@ -1,0 +1,137 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 65px;
+}
+.form {
+  min-width: 0;
+}
+.fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.label {
+  display: block;
+  margin: 0 0 20px;
+  font-size: 0.88rem;
+}
+.label input,
+.label select,
+.label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px 14px;
+  background: #fff8ef;
+  color: var(--wine);
+  border: 1px solid #99796b;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.label input[aria-invalid="true"],
+.label select[aria-invalid="true"],
+.label textarea[aria-invalid="true"] {
+  border: 2px solid #a72121;
+}
+.hint {
+  display: block;
+  font-size: 0.76rem;
+  margin-top: 6px;
+  color: var(--muted);
+}
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin: 22px 0;
+  font-size: 0.8rem;
+}
+.check input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: var(--wine);
+}
+.message {
+  border-left: 3px solid var(--wine);
+  background: var(--cloud);
+  padding: 17px 20px;
+  margin: 18px 0;
+}
+.message p:last-child {
+  margin-bottom: 0;
+}
+.fieldError {
+  color: #9b1f1f;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 7px;
+}
+.botField {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.submit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.submit button {
+  flex-grow: 1;
+}
+.privacy {
+  font-size: 0.76rem;
+  margin-top: 20px;
+  color: var(--muted);
+}
+.success {
+  padding: 30px;
+  border: 1px solid var(--line);
+  max-width: 650px;
+}
+.success h2 {
+  font-size: 2rem;
+  font-weight: 450;
+  line-height: 1.15;
+}
+.reference {
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+.verification {
+  margin: 18px 0;
+  min-height: 65px;
+  max-width: 100%;
+}
+.retry {
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  padding: 12px 0;
+  color: inherit;
+  font-size: 0.8rem;
+}
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .success {
+    padding: 22px;
+  }
+  .submit {
+    display: block;
+  }
+  .submit button {
+    width: 100%;
+  }
+}
